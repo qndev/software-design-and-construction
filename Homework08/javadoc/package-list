@@ -1,0 +1,7 @@
+edu.hust.soict.dao
+edu.hust.soict.logic
+edu.hust.soict.objects
+edu.hust.soict.ui
+edu.hust.soict.ui.admin
+edu.hust.soict.ui.student
+edu.hust.soict.util

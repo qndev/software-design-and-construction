@@ -1,0 +1,2036 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Student Information System">
+  <ClassDiagramComponents>
+    <Class name="ExportData" package="edu.hust.soict.util" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="exportExcel" returnType="void" visibility="public">
+          <Argument type="JTable" name="table"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PasswordUtils" package="edu.hust.soict.util" visibility="public" xPosition="238.0" yPosition="20.0">
+      <Fields>
+        <Field name="passwordEncryptor" type="StrongPasswordEncryptor" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="encryptPassword" returnType="String" visibility="public" isStatic="true">
+          <Argument type="String" name="data"/>
+        </Method>
+        <Method name="checkPassword" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="String" name="getPasswordTextField"/>
+          <Argument type="String" name="encryptedPassword"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AddUser" package="edu.hust.soict.objects" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="user_name" type="String" visibility="private"/>
+        <Field name="password" type="String" visibility="private"/>
+        <Field name="is_admin" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="user_name"/>
+          <Argument type="String" name="password"/>
+          <Argument type="String" name="is_admin"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="user_name"/>
+          <Argument type="String" name="password"/>
+          <Argument type="String" name="is_admin"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getUser_name" returnType="String" visibility="public"/>
+        <Method name="setUser_name" returnType="void" visibility="public">
+          <Argument type="String" name="user_name"/>
+        </Method>
+        <Method name="getPassword" returnType="String" visibility="public"/>
+        <Method name="setPassword" returnType="void" visibility="public">
+          <Argument type="String" name="password"/>
+        </Method>
+        <Method name="getIs_admin" returnType="String" visibility="public"/>
+        <Method name="setIs_admin" returnType="void" visibility="public">
+          <Argument type="String" name="is_admin"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DangNhap" package="edu.hust.soict.objects" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="changeSupport" type="PropertyChangeSupport" visibility="private"/>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="userName" type="String" visibility="private"/>
+        <Field name="password" type="String" visibility="private"/>
+        <Field name="isAdmin" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="userName"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="userName"/>
+          <Argument type="String" name="password"/>
+          <Argument type="String" name="isAdmin"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getUserName" returnType="String" visibility="public"/>
+        <Method name="setUserName" returnType="void" visibility="public">
+          <Argument type="String" name="userName"/>
+        </Method>
+        <Method name="getPassword" returnType="String" visibility="public"/>
+        <Method name="setPassword" returnType="void" visibility="public">
+          <Argument type="String" name="password"/>
+        </Method>
+        <Method name="getIsAdmin" returnType="String" visibility="public"/>
+        <Method name="setIsAdmin" returnType="void" visibility="public">
+          <Argument type="String" name="isAdmin"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="addPropertyChangeListener" returnType="void" visibility="public">
+          <Argument type="PropertyChangeListener" name="listener"/>
+        </Method>
+        <Method name="removePropertyChangeListener" returnType="void" visibility="public">
+          <Argument type="PropertyChangeListener" name="listener"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Class" package="edu.hust.soict.objects" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="ma_lop_DK" type="String" visibility="private"/>
+        <Field name="bat_dau" type="String" visibility="private"/>
+        <Field name="ket_thuc" type="String" visibility="private"/>
+        <Field name="thu" type="String" visibility="private"/>
+        <Field name="tuan_hoc" type="String" visibility="private"/>
+        <Field name="loai_lop" type="String" visibility="private"/>
+        <Field name="ma_mon_hoc" type="String" visibility="private"/>
+        <Field name="nhom" type="String" visibility="private"/>
+        <Field name="phong_hoc" type="String" visibility="private"/>
+        <Field name="da_DK" type="String" visibility="private"/>
+        <Field name="max_DK" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="ma_lop_DK"/>
+          <Argument type="String" name="bat_dau"/>
+          <Argument type="String" name="ket_thuc"/>
+          <Argument type="String" name="thu"/>
+          <Argument type="String" name="tuan_hoc"/>
+          <Argument type="String" name="loai_lop"/>
+          <Argument type="String" name="ma_mon_hoc"/>
+          <Argument type="String" name="nhom"/>
+          <Argument type="String" name="phong_hoc"/>
+          <Argument type="String" name="da_DK"/>
+          <Argument type="String" name="max_DK"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getMa_lop_DK" returnType="String" visibility="public"/>
+        <Method name="setMa_lop_DK" returnType="void" visibility="public">
+          <Argument type="String" name="ma_lop_DK"/>
+        </Method>
+        <Method name="getBat_dau" returnType="String" visibility="public"/>
+        <Method name="setBat_dau" returnType="void" visibility="public">
+          <Argument type="String" name="bat_dau"/>
+        </Method>
+        <Method name="getKet_thuc" returnType="String" visibility="public"/>
+        <Method name="setKet_thuc" returnType="void" visibility="public">
+          <Argument type="String" name="ket_thuc"/>
+        </Method>
+        <Method name="getThu" returnType="String" visibility="public"/>
+        <Method name="setThu" returnType="void" visibility="public">
+          <Argument type="String" name="thu"/>
+        </Method>
+        <Method name="getTuan_hoc" returnType="String" visibility="public"/>
+        <Method name="setTuan_hoc" returnType="void" visibility="public">
+          <Argument type="String" name="tuan_hoc"/>
+        </Method>
+        <Method name="getLoai_lop" returnType="String" visibility="public"/>
+        <Method name="setLoai_lop" returnType="void" visibility="public">
+          <Argument type="String" name="loai_lop"/>
+        </Method>
+        <Method name="getMa_mon_hoc" returnType="String" visibility="public"/>
+        <Method name="setMa_mon_hoc" returnType="void" visibility="public">
+          <Argument type="String" name="ma_mon_hoc"/>
+        </Method>
+        <Method name="getNhom" returnType="String" visibility="public"/>
+        <Method name="setNhom" returnType="void" visibility="public">
+          <Argument type="String" name="nhom"/>
+        </Method>
+        <Method name="getPhong_hoc" returnType="String" visibility="public"/>
+        <Method name="setPhong_hoc" returnType="void" visibility="public">
+          <Argument type="String" name="phong_hoc"/>
+        </Method>
+        <Method name="getDa_DK" returnType="String" visibility="public"/>
+        <Method name="setDa_DK" returnType="void" visibility="public">
+          <Argument type="String" name="da_DK"/>
+        </Method>
+        <Method name="getMax_DK" returnType="String" visibility="public"/>
+        <Method name="setMax_DK" returnType="void" visibility="public">
+          <Argument type="String" name="max_DK"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="MonHoc" package="edu.hust.soict.objects" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields>
+        <Field name="changeSupport" type="PropertyChangeSupport" visibility="private"/>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="idMonHoc" type="String" visibility="private"/>
+        <Field name="tenMonHoc" type="String" visibility="private"/>
+        <Field name="thoiLuong" type="String" visibility="private"/>
+        <Field name="soTinChi" type="int" visibility="private"/>
+        <Field name="tinChiHocPhi" type="float" visibility="private"/>
+        <Field name="trongSo" type="float" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="idMonHoc"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="idMonHoc"/>
+          <Argument type="String" name="tenMonHoc"/>
+          <Argument type="String" name="thoiLuong"/>
+          <Argument type="int" name="soTinChi"/>
+          <Argument type="float" name="tinChiHocPhi"/>
+          <Argument type="float" name="trongSo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getIdMonHoc" returnType="String" visibility="public"/>
+        <Method name="setIdMonHoc" returnType="void" visibility="public">
+          <Argument type="String" name="idMonHoc"/>
+        </Method>
+        <Method name="getTenMonHoc" returnType="String" visibility="public"/>
+        <Method name="setTenMonHoc" returnType="void" visibility="public">
+          <Argument type="String" name="tenMonHoc"/>
+        </Method>
+        <Method name="getThoiLuong" returnType="String" visibility="public"/>
+        <Method name="setThoiLuong" returnType="void" visibility="public">
+          <Argument type="String" name="thoiLuong"/>
+        </Method>
+        <Method name="getSoTinChi" returnType="int" visibility="public"/>
+        <Method name="setSoTinChi" returnType="void" visibility="public">
+          <Argument type="int" name="soTinChi"/>
+        </Method>
+        <Method name="getTinChiHocPhi" returnType="float" visibility="public"/>
+        <Method name="setTinChiHocPhi" returnType="void" visibility="public">
+          <Argument type="float" name="tinChiHocPhi"/>
+        </Method>
+        <Method name="getTrongSo" returnType="float" visibility="public"/>
+        <Method name="setTrongSo" returnType="void" visibility="public">
+          <Argument type="float" name="trongSo"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="addPropertyChangeListener" returnType="void" visibility="public">
+          <Argument type="PropertyChangeListener" name="listener"/>
+        </Method>
+        <Method name="removePropertyChangeListener" returnType="void" visibility="public">
+          <Argument type="PropertyChangeListener" name="listener"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DanhsachSVdangkilop" package="edu.hust.soict.objects" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="changeSupport" type="PropertyChangeSupport" visibility="private"/>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="iddanhsachSVdangkilop" type="Integer" visibility="private"/>
+        <Field name="idsinhvienDK" type="String" visibility="private"/>
+        <Field name="malopmoSVDK" type="String" visibility="private"/>
+        <Field name="soluongDK" type="Integer" visibility="private"/>
+        <Field name="maxDK" type="Integer" visibility="private"/>
+        <Field name="hockiDK" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="iddanhsachSVdangkilop"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="iddanhsachSVdangkilop"/>
+          <Argument type="String" name="idsinhvienDK"/>
+          <Argument type="String" name="malopmoSVDK"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getIddanhsachSVdangkilop" returnType="Integer" visibility="public"/>
+        <Method name="setIddanhsachSVdangkilop" returnType="void" visibility="public">
+          <Argument type="Integer" name="iddanhsachSVdangkilop"/>
+        </Method>
+        <Method name="getIdsinhvienDK" returnType="String" visibility="public"/>
+        <Method name="setIdsinhvienDK" returnType="void" visibility="public">
+          <Argument type="String" name="idsinhvienDK"/>
+        </Method>
+        <Method name="getMalopmoSVDK" returnType="String" visibility="public"/>
+        <Method name="setMalopmoSVDK" returnType="void" visibility="public">
+          <Argument type="String" name="malopmoSVDK"/>
+        </Method>
+        <Method name="getSoluongDK" returnType="Integer" visibility="public"/>
+        <Method name="setSoluongDK" returnType="void" visibility="public">
+          <Argument type="Integer" name="soluongDK"/>
+        </Method>
+        <Method name="getMaxDK" returnType="Integer" visibility="public"/>
+        <Method name="setMaxDK" returnType="void" visibility="public">
+          <Argument type="Integer" name="maxDK"/>
+        </Method>
+        <Method name="getHockiDK" returnType="String" visibility="public"/>
+        <Method name="setHockiDK" returnType="void" visibility="public">
+          <Argument type="String" name="hockiDK"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="addPropertyChangeListener" returnType="void" visibility="public">
+          <Argument type="PropertyChangeListener" name="listener"/>
+        </Method>
+        <Method name="removePropertyChangeListener" returnType="void" visibility="public">
+          <Argument type="PropertyChangeListener" name="listener"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MakeCourses" package="edu.hust.soict.objects" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields>
+        <Field name="ma_lop_DK" type="String" visibility="private"/>
+        <Field name="bat_dau" type="String" visibility="private"/>
+        <Field name="ket_thuc" type="String" visibility="private"/>
+        <Field name="thu" type="String" visibility="private"/>
+        <Field name="tuan_hoc" type="String" visibility="private"/>
+        <Field name="loai_lop" type="String" visibility="private"/>
+        <Field name="ma_mon_hoc" type="String" visibility="private"/>
+        <Field name="nhom" type="String" visibility="private"/>
+        <Field name="phong_hoc" type="String" visibility="private"/>
+        <Field name="max_DK" type="Integer" visibility="private"/>
+        <Field name="hoc_ki" type="String" visibility="private"/>
+        <Field name="thoi_han_DK" type="Date" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="ma_lop_DK"/>
+          <Argument type="String" name="bat_dau"/>
+          <Argument type="String" name="ket_thuc"/>
+          <Argument type="String" name="thu"/>
+          <Argument type="String" name="tuan_hoc"/>
+          <Argument type="String" name="loai_lop"/>
+          <Argument type="String" name="ma_mon_hoc"/>
+          <Argument type="String" name="nhom"/>
+          <Argument type="String" name="phong_hoc"/>
+          <Argument type="Integer" name="max_DK"/>
+          <Argument type="String" name="hoc_ki"/>
+          <Argument type="Date" name="thoi_han_DK"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getMa_lop_DK" returnType="String" visibility="public"/>
+        <Method name="setMa_lop_DK" returnType="void" visibility="public">
+          <Argument type="String" name="ma_lop_DK"/>
+        </Method>
+        <Method name="getBat_dau" returnType="String" visibility="public"/>
+        <Method name="setBat_dau" returnType="void" visibility="public">
+          <Argument type="String" name="bat_dau"/>
+        </Method>
+        <Method name="getKet_thuc" returnType="String" visibility="public"/>
+        <Method name="setKet_thuc" returnType="void" visibility="public">
+          <Argument type="String" name="ket_thuc"/>
+        </Method>
+        <Method name="getThu" returnType="String" visibility="public"/>
+        <Method name="setThu" returnType="void" visibility="public">
+          <Argument type="String" name="thu"/>
+        </Method>
+        <Method name="getTuan_hoc" returnType="String" visibility="public"/>
+        <Method name="setTuan_hoc" returnType="void" visibility="public">
+          <Argument type="String" name="tuan_hoc"/>
+        </Method>
+        <Method name="getLoai_lop" returnType="String" visibility="public"/>
+        <Method name="setLoai_lop" returnType="void" visibility="public">
+          <Argument type="String" name="loai_lop"/>
+        </Method>
+        <Method name="getMa_mon_hoc" returnType="String" visibility="public"/>
+        <Method name="setMa_mon_hoc" returnType="void" visibility="public">
+          <Argument type="String" name="ma_mon_hoc"/>
+        </Method>
+        <Method name="getNhom" returnType="String" visibility="public"/>
+        <Method name="setNhom" returnType="void" visibility="public">
+          <Argument type="String" name="nhom"/>
+        </Method>
+        <Method name="getPhong_hoc" returnType="String" visibility="public"/>
+        <Method name="setPhong_hoc" returnType="void" visibility="public">
+          <Argument type="String" name="phong_hoc"/>
+        </Method>
+        <Method name="getMax_DK" returnType="Integer" visibility="public"/>
+        <Method name="setMax_DK" returnType="void" visibility="public">
+          <Argument type="Integer" name="max_DK"/>
+        </Method>
+        <Method name="getHoc_ki" returnType="String" visibility="public"/>
+        <Method name="setHoc_ki" returnType="void" visibility="public">
+          <Argument type="String" name="hoc_ki"/>
+        </Method>
+        <Method name="getThoi_han_DK" returnType="Date" visibility="public"/>
+        <Method name="setThoi_han_DK" returnType="void" visibility="public">
+          <Argument type="Date" name="thoi_han_DK"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DanhsachlopmoDK" package="edu.hust.soict.objects" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields>
+        <Field name="changeSupport" type="PropertyChangeSupport" visibility="private"/>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="iddanhsachlopmoDK" type="Integer" visibility="private"/>
+        <Field name="malopmoDK" type="String" visibility="private"/>
+        <Field name="thoiGianBatDau" type="Date" visibility="private"/>
+        <Field name="thoiGianKetThuc" type="Date" visibility="private"/>
+        <Field name="thu" type="String" visibility="private"/>
+        <Field name="tuanHoc" type="String" visibility="private"/>
+        <Field name="loaiLop" type="String" visibility="private"/>
+        <Field name="idmonhocDK" type="String" visibility="private"/>
+        <Field name="nhom" type="String" visibility="private"/>
+        <Field name="phongHoc" type="String" visibility="private"/>
+        <Field name="hocKi" type="String" visibility="private"/>
+        <Field name="soLuongDaDangKi" type="int" visibility="private"/>
+        <Field name="soluongmaxDK" type="int" visibility="private"/>
+        <Field name="dateToExist" type="Date" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="iddanhsachlopmoDK"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="iddanhsachlopmoDK"/>
+          <Argument type="String" name="malopmoDK"/>
+          <Argument type="Date" name="thoiGianBatDau"/>
+          <Argument type="Date" name="thoiGianKetThuc"/>
+          <Argument type="String" name="thu"/>
+          <Argument type="String" name="tuanHoc"/>
+          <Argument type="String" name="loaiLop"/>
+          <Argument type="String" name="idmonhocDK"/>
+          <Argument type="String" name="nhom"/>
+          <Argument type="String" name="phongHoc"/>
+          <Argument type="String" name="hocKi"/>
+          <Argument type="int" name="soLuongDaDangKi"/>
+          <Argument type="int" name="soluongmaxDK"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getIddanhsachlopmoDK" returnType="Integer" visibility="public"/>
+        <Method name="setIddanhsachlopmoDK" returnType="void" visibility="public">
+          <Argument type="Integer" name="iddanhsachlopmoDK"/>
+        </Method>
+        <Method name="getMalopmoDK" returnType="String" visibility="public"/>
+        <Method name="setMalopmoDK" returnType="void" visibility="public">
+          <Argument type="String" name="malopmoDK"/>
+        </Method>
+        <Method name="getThoiGianBatDau" returnType="Date" visibility="public"/>
+        <Method name="setThoiGianBatDau" returnType="void" visibility="public">
+          <Argument type="Date" name="thoiGianBatDau"/>
+        </Method>
+        <Method name="getThoiGianKetThuc" returnType="Date" visibility="public"/>
+        <Method name="setThoiGianKetThuc" returnType="void" visibility="public">
+          <Argument type="Date" name="thoiGianKetThuc"/>
+        </Method>
+        <Method name="getThu" returnType="String" visibility="public"/>
+        <Method name="setThu" returnType="void" visibility="public">
+          <Argument type="String" name="thu"/>
+        </Method>
+        <Method name="getTuanHoc" returnType="String" visibility="public"/>
+        <Method name="setTuanHoc" returnType="void" visibility="public">
+          <Argument type="String" name="tuanHoc"/>
+        </Method>
+        <Method name="getLoaiLop" returnType="String" visibility="public"/>
+        <Method name="setLoaiLop" returnType="void" visibility="public">
+          <Argument type="String" name="loaiLop"/>
+        </Method>
+        <Method name="getIdmonhocDK" returnType="String" visibility="public"/>
+        <Method name="setIdmonhocDK" returnType="void" visibility="public">
+          <Argument type="String" name="idmonhocDK"/>
+        </Method>
+        <Method name="getNhom" returnType="String" visibility="public"/>
+        <Method name="setNhom" returnType="void" visibility="public">
+          <Argument type="String" name="nhom"/>
+        </Method>
+        <Method name="getPhongHoc" returnType="String" visibility="public"/>
+        <Method name="setPhongHoc" returnType="void" visibility="public">
+          <Argument type="String" name="phongHoc"/>
+        </Method>
+        <Method name="getHocKi" returnType="String" visibility="public"/>
+        <Method name="setHocKi" returnType="void" visibility="public">
+          <Argument type="String" name="hocKi"/>
+        </Method>
+        <Method name="getSoLuongDaDangKi" returnType="int" visibility="public"/>
+        <Method name="setSoLuongDaDangKi" returnType="void" visibility="public">
+          <Argument type="int" name="soLuongDaDangKi"/>
+        </Method>
+        <Method name="getSoluongmaxDK" returnType="int" visibility="public"/>
+        <Method name="setSoluongmaxDK" returnType="void" visibility="public">
+          <Argument type="int" name="soluongmaxDK"/>
+        </Method>
+        <Method name="getDateToExist" returnType="Date" visibility="public"/>
+        <Method name="setDateToExist" returnType="void" visibility="public">
+          <Argument type="Date" name="dateToExist"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="addPropertyChangeListener" returnType="void" visibility="public">
+          <Argument type="PropertyChangeListener" name="listener"/>
+        </Method>
+        <Method name="removePropertyChangeListener" returnType="void" visibility="public">
+          <Argument type="PropertyChangeListener" name="listener"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Student" package="edu.hust.soict.objects" visibility="public" xPosition="320.0" yPosition="420.0">
+      <Fields>
+        <Field name="id_sinh_vien" type="String" visibility="private"/>
+        <Field name="ten_sinh_vien" type="String" visibility="private"/>
+        <Field name="ngay_sinh" type="Date" visibility="private"/>
+        <Field name="lop_hoc" type="String" visibility="private"/>
+        <Field name="chuong_trinh_DT" type="String" visibility="private"/>
+        <Field name="he_hoc" type="String" visibility="private"/>
+        <Field name="trang_thai" type="String" visibility="private"/>
+        <Field name="khoa" type="String" visibility="private"/>
+        <Field name="department" type="String" visibility="private"/>
+        <Field name="email" type="String" visibility="private"/>
+        <Field name="don_vi_HP" type="Double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="id_sinh_vien"/>
+          <Argument type="String" name="ten_sinh_vien"/>
+          <Argument type="Date" name="ngay_sinh"/>
+          <Argument type="String" name="lop_hoc"/>
+          <Argument type="String" name="chuong_trinh_DT"/>
+          <Argument type="String" name="he_hoc"/>
+          <Argument type="String" name="trang_thai"/>
+          <Argument type="String" name="khoa"/>
+          <Argument type="String" name="department"/>
+          <Argument type="String" name="email"/>
+          <Argument type="Double" name="don_vi_HP"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="id_sinh_vien"/>
+          <Argument type="String" name="ten_sinh_vien"/>
+          <Argument type="Date" name="ngay_sinh"/>
+          <Argument type="String" name="email"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getId_sinh_vien" returnType="String" visibility="public"/>
+        <Method name="setId_sinh_vien" returnType="void" visibility="public">
+          <Argument type="String" name="id_sinh_vien"/>
+        </Method>
+        <Method name="getTen_sinh_vien" returnType="String" visibility="public"/>
+        <Method name="setTen_sinh_vien" returnType="void" visibility="public">
+          <Argument type="String" name="ten_sinh_vien"/>
+        </Method>
+        <Method name="getNgay_sinh" returnType="Date" visibility="public"/>
+        <Method name="setNgay_sinh" returnType="void" visibility="public">
+          <Argument type="Date" name="ngay_sinh"/>
+        </Method>
+        <Method name="getLop_hoc" returnType="String" visibility="public"/>
+        <Method name="setLop_hoc" returnType="void" visibility="public">
+          <Argument type="String" name="lop_hoc"/>
+        </Method>
+        <Method name="getChuong_trinh_DT" returnType="String" visibility="public"/>
+        <Method name="setChuong_trinh_DT" returnType="void" visibility="public">
+          <Argument type="String" name="chuong_trinh_DT"/>
+        </Method>
+        <Method name="getTrang_thai" returnType="String" visibility="public"/>
+        <Method name="setTrang_thai" returnType="void" visibility="public">
+          <Argument type="String" name="trang_thai"/>
+        </Method>
+        <Method name="getEmail" returnType="String" visibility="public"/>
+        <Method name="setEmail" returnType="void" visibility="public">
+          <Argument type="String" name="email"/>
+        </Method>
+        <Method name="getKhoa" returnType="String" visibility="public"/>
+        <Method name="setKhoa" returnType="void" visibility="public">
+          <Argument type="String" name="khoa"/>
+        </Method>
+        <Method name="getHe_hoc" returnType="String" visibility="public"/>
+        <Method name="setHe_hoc" returnType="void" visibility="public">
+          <Argument type="String" name="he_hoc"/>
+        </Method>
+        <Method name="getDepartment" returnType="String" visibility="public"/>
+        <Method name="setDepartment" returnType="void" visibility="public">
+          <Argument type="String" name="department"/>
+        </Method>
+        <Method name="getDon_vi_HP" returnType="Double" visibility="public"/>
+        <Method name="setDon_vi_HP" returnType="void" visibility="public">
+          <Argument type="Double" name="don_vi_HP"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Register" package="edu.hust.soict.objects" visibility="public" xPosition="620.0" yPosition="420.0">
+      <Fields>
+        <Field name="idDKLop" type="String" visibility="private"/>
+        <Field name="maSinhVienDK" type="String" visibility="private"/>
+        <Field name="maLopDK" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="idDKLop"/>
+          <Argument type="String" name="maSinhVienDK"/>
+          <Argument type="String" name="maLopDK"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="maSinhVienDK"/>
+          <Argument type="String" name="maLopDK"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getIdDKLop" returnType="String" visibility="public"/>
+        <Method name="setIdDKLop" returnType="void" visibility="public">
+          <Argument type="String" name="idDKLop"/>
+        </Method>
+        <Method name="getMaSinhVienDK" returnType="String" visibility="public"/>
+        <Method name="setMaSinhVienDK" returnType="void" visibility="public">
+          <Argument type="String" name="maSinhVienDK"/>
+        </Method>
+        <Method name="getMaLopDK" returnType="String" visibility="public"/>
+        <Method name="setMaLopDK" returnType="void" visibility="public">
+          <Argument type="String" name="maLopDK"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ThongTinSinhVien" package="edu.hust.soict.objects" visibility="public" xPosition="920.0" yPosition="420.0">
+      <Fields>
+        <Field name="changeSupport" type="PropertyChangeSupport" visibility="private"/>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="idSinhVien" type="String" visibility="private"/>
+        <Field name="tenSinhVien" type="String" visibility="private"/>
+        <Field name="ngaySinh" type="String" visibility="private"/>
+        <Field name="lopHoc" type="String" visibility="private"/>
+        <Field name="chuongtrinhDT" type="String" visibility="private"/>
+        <Field name="heHoc" type="String" visibility="private"/>
+        <Field name="trangThai" type="String" visibility="private"/>
+        <Field name="khoaHoc" type="String" visibility="private"/>
+        <Field name="department" type="String" visibility="private"/>
+        <Field name="email" type="String" visibility="private"/>
+        <Field name="donViTinChiHocPhi" type="float" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="idSinhVien"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="idSinhVien"/>
+          <Argument type="String" name="tenSinhVien"/>
+          <Argument type="String" name="ngaySinh"/>
+          <Argument type="String" name="lopHoc"/>
+          <Argument type="String" name="chuongtrinhDT"/>
+          <Argument type="String" name="heHoc"/>
+          <Argument type="String" name="trangThai"/>
+          <Argument type="String" name="khoaHoc"/>
+          <Argument type="String" name="department"/>
+          <Argument type="String" name="email"/>
+          <Argument type="float" name="donViTinChiHocPhi"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getIdSinhVien" returnType="String" visibility="public"/>
+        <Method name="setIdSinhVien" returnType="void" visibility="public">
+          <Argument type="String" name="idSinhVien"/>
+        </Method>
+        <Method name="getTenSinhVien" returnType="String" visibility="public"/>
+        <Method name="setTenSinhVien" returnType="void" visibility="public">
+          <Argument type="String" name="tenSinhVien"/>
+        </Method>
+        <Method name="getNgaySinh" returnType="String" visibility="public"/>
+        <Method name="setNgaySinh" returnType="void" visibility="public">
+          <Argument type="String" name="ngaySinh"/>
+        </Method>
+        <Method name="getLopHoc" returnType="String" visibility="public"/>
+        <Method name="setLopHoc" returnType="void" visibility="public">
+          <Argument type="String" name="lopHoc"/>
+        </Method>
+        <Method name="getChuongtrinhDT" returnType="String" visibility="public"/>
+        <Method name="setChuongtrinhDT" returnType="void" visibility="public">
+          <Argument type="String" name="chuongtrinhDT"/>
+        </Method>
+        <Method name="getHeHoc" returnType="String" visibility="public"/>
+        <Method name="setHeHoc" returnType="void" visibility="public">
+          <Argument type="String" name="heHoc"/>
+        </Method>
+        <Method name="getTrangThai" returnType="String" visibility="public"/>
+        <Method name="setTrangThai" returnType="void" visibility="public">
+          <Argument type="String" name="trangThai"/>
+        </Method>
+        <Method name="getKhoaHoc" returnType="String" visibility="public"/>
+        <Method name="setKhoaHoc" returnType="void" visibility="public">
+          <Argument type="String" name="khoaHoc"/>
+        </Method>
+        <Method name="getDepartment" returnType="String" visibility="public"/>
+        <Method name="setDepartment" returnType="void" visibility="public">
+          <Argument type="String" name="department"/>
+        </Method>
+        <Method name="getEmail" returnType="String" visibility="public"/>
+        <Method name="setEmail" returnType="void" visibility="public">
+          <Argument type="String" name="email"/>
+        </Method>
+        <Method name="getDonViTinChiHocPhi" returnType="float" visibility="public"/>
+        <Method name="setDonViTinChiHocPhi" returnType="void" visibility="public">
+          <Argument type="float" name="donViTinChiHocPhi"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="addPropertyChangeListener" returnType="void" visibility="public">
+          <Argument type="PropertyChangeListener" name="listener"/>
+        </Method>
+        <Method name="removePropertyChangeListener" returnType="void" visibility="public">
+          <Argument type="PropertyChangeListener" name="listener"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Check" package="edu.hust.soict.logic" visibility="public" xPosition="1220.0" yPosition="420.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="checkName" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="String" name="n"/>
+        </Method>
+        <Method name="checkPhone" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="String" name="n"/>
+        </Method>
+        <Method name="checkMark" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="String" name="n"/>
+        </Method>
+        <Method name="checkSpace" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="String" name="n"/>
+        </Method>
+        <Method name="checkEmail" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="String" name="n"/>
+        </Method>
+        <Method name="checkNumber" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="String" name="n"/>
+        </Method>
+        <Method name="check" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="String" name="n"/>
+        </Method>
+        <Method name="checkID" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="String" name="n"/>
+        </Method>
+        <Method name="checkIDCourses" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="String" name="n"/>
+        </Method>
+        <Method name="checkDate" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="String" name="n"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Schedule" package="edu.hust.soict.ui.student" visibility="public" xPosition="1520.0" yPosition="420.0">
+      <Fields>
+        <Field name="ps" type="PreparedStatement" visibility="package"/>
+        <Field name="rs" type="ResultSet" visibility="package"/>
+        <Field name="dtmSchedule" type="DefaultTableModel" visibility="package"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTable1" type="javax.swing.JTable" visibility="private"/>
+        <Field name="jTextField1" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="username"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="fetchData" returnType="void" visibility="public"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="formWindowOpened" returnType="void" visibility="private">
+          <Argument type="java.awt.event.WindowEvent" name="evt"/>
+        </Method>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jTextField1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="setIcon" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="Subjects" package="edu.hust.soict.ui.student" visibility="public" xPosition="1820.0" yPosition="420.0">
+      <Fields>
+        <Field name="dtmMonHoc" type="DefaultTableModel" visibility="private" isFinal="true"/>
+        <Field name="entityManager" type="javax.persistence.EntityManager" visibility="private"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTable1" type="javax.swing.JTable" visibility="private"/>
+        <Field name="jTextField1" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="monHocList" type="java.util.List&lt;edu.hust.soict.objects.MonHoc&gt;" visibility="private"/>
+        <Field name="monHocQuery" type="javax.persistence.Query" visibility="private"/>
+        <Field name="bindingGroup" type="org.jdesktop.beansbinding.BindingGroup" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="searchSubjects" returnType="void" visibility="private"/>
+        <Method name="toObjectData" returnType="Object[]" visibility="private" isStatic="true">
+          <Argument type="MonHoc" name="sub"/>
+        </Method>
+        <Method name="setIcon" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="StudentRegisterCourses" package="edu.hust.soict.ui.student" visibility="public" xPosition="2120.0" yPosition="420.0">
+      <Fields>
+        <Field name="mainStudent" type="MainStudent" visibility="package"/>
+        <Field name="dtmMaSV" type="DefaultTableModel" visibility="private" isFinal="true"/>
+        <Field name="dtmLop" type="DefaultTableModel" visibility="private" isFinal="true"/>
+        <Field name="dtmDetailReg" type="DefaultTableModel" visibility="private" isFinal="true"/>
+        <Field name="userlogin" type="String" visibility="package"/>
+        <Field name="ps" type="PreparedStatement" visibility="package"/>
+        <Field name="rs" type="ResultSet" visibility="package"/>
+        <Field name="entityManager" type="javax.persistence.EntityManager" visibility="private"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton2" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton4" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel5" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel7" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel8" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane3" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTabbedPane1" type="javax.swing.JTabbedPane" visibility="public"/>
+        <Field name="jTextField1" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField2" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField3" type="javax.swing.JTextField" visibility="public"/>
+        <Field name="jbtnsearchmasv" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jtbLOP" type="javax.swing.JTable" visibility="private"/>
+        <Field name="jtbLOP1" type="javax.swing.JTable" visibility="private"/>
+        <Field name="jtfmaLop" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="thongTinSinhVienList" type="java.util.List&lt;edu.hust.soict.objects.ThongTinSinhVien&gt;" visibility="private"/>
+        <Field name="thongTinSinhVienQuery" type="javax.persistence.Query" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="username"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jtfmaLopKeyPressed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="jtfmaLopKeyReleased" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="jtfmaLopKeyTyped" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="jbtnsearchmasvActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jtbLOP1MouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jButton4ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="toObjectData" returnType="Object[]" visibility="private" isStatic="true">
+          <Argument type="Student" name="sv"/>
+        </Method>
+        <Method name="timKiemLopDK" returnType="void" visibility="public"/>
+        <Method name="toOjectClass" returnType="Object[]" visibility="public" isStatic="true">
+          <Argument type="Class" name="cl"/>
+        </Method>
+        <Method name="resetForm1" returnType="void" visibility="private"/>
+        <Method name="toObjectStudentRegister" returnType="Object[]" visibility="private" isStatic="true">
+          <Argument type="Register" name="sv"/>
+        </Method>
+        <Method name="resetForm" returnType="void" visibility="private"/>
+        <Method name="fetchJLabel4" returnType="void" visibility="private"/>
+        <Method name="fetchListCourses" returnType="void" visibility="private"/>
+        <Method name="fetchRegister" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="SearchInfoStudent" package="edu.hust.soict.ui.student" visibility="public" xPosition="20.0" yPosition="820.0">
+      <Fields>
+        <Field name="mainStudent" type="MainStudent" visibility="package"/>
+        <Field name="dtmMaSV" type="DefaultTableModel" visibility="private" isFinal="true"/>
+        <Field name="userlogin" type="String" visibility="package"/>
+        <Field name="ps" type="PreparedStatement" visibility="package"/>
+        <Field name="rs" type="ResultSet" visibility="package"/>
+        <Field name="entityManager" type="javax.persistence.EntityManager" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel4" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel6" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane2" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTabbedPane1" type="javax.swing.JTabbedPane" visibility="public"/>
+        <Field name="jbtSearch" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jtbTTSV" type="javax.swing.JTable" visibility="private"/>
+        <Field name="jtfmaSV" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="thongTinSinhVienList" type="java.util.List&lt;edu.hust.soict.objects.ThongTinSinhVien&gt;" visibility="private"/>
+        <Field name="thongTinSinhVienQuery" type="javax.persistence.Query" visibility="private"/>
+        <Field name="bindingGroup" type="org.jdesktop.beansbinding.BindingGroup" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="username"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jtbTTSVMouseReleased" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jbtSearchActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jtfmaSVKeyReleased" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="jtfmaSVKeyTyped" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="jtfmaSVKeyPressed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="jtfmaSVActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="timKiemTheoMaSV" returnType="void" visibility="public"/>
+        <Method name="toObjectData" returnType="Object[]" visibility="private" isStatic="true">
+          <Argument type="Student" name="sv"/>
+        </Method>
+        <Method name="toOjectClass" returnType="Object[]" visibility="public" isStatic="true">
+          <Argument type="Class" name="cl"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ChangePassword" package="edu.hust.soict.ui.student" visibility="public" xPosition="320.0" yPosition="820.0">
+      <Fields>
+        <Field name="ps" type="PreparedStatement" visibility="package"/>
+        <Field name="rs" type="ResultSet" visibility="package"/>
+        <Field name="jButton2" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPasswordField1" type="javax.swing.JPasswordField" visibility="private"/>
+        <Field name="jPasswordField2" type="javax.swing.JPasswordField" visibility="private"/>
+        <Field name="jPasswordField3" type="javax.swing.JPasswordField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="username"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jButton2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TuitionStudent" package="edu.hust.soict.ui.student" visibility="public" xPosition="620.0" yPosition="820.0">
+      <Fields>
+        <Field name="cnn" type="Connection" visibility="package"/>
+        <Field name="rs" type="ResultSet" visibility="package"/>
+        <Field name="ps" type="PreparedStatement" visibility="package"/>
+        <Field name="userName" type="String" visibility="package"/>
+        <Field name="name" type="String" visibility="package"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="java.awt.Frame" name="parent"/>
+          <Argument type="boolean" name="modal"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="name"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="setIcon" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="StudentInfomation" package="edu.hust.soict.ui.student" visibility="public" xPosition="920.0" yPosition="820.0">
+      <Fields>
+        <Field name="userLogin" type="String" visibility="package"/>
+        <Field name="name" type="String" visibility="package"/>
+        <Field name="ngaySinh" type="String" visibility="package"/>
+        <Field name="lopHoc" type="String" visibility="package"/>
+        <Field name="chuongTrinhDT" type="String" visibility="package"/>
+        <Field name="trangThai" type="String" visibility="package"/>
+        <Field name="email" type="String" visibility="package"/>
+        <Field name="heHoc" type="String" visibility="package"/>
+        <Field name="tuiTion" type="Double" visibility="package"/>
+        <Field name="ps" type="PreparedStatement" visibility="package"/>
+        <Field name="cnn" type="Connection" visibility="package"/>
+        <Field name="rs" type="ResultSet" visibility="package"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jTextField1" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField2" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField3" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField4" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField5" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField6" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField7" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField8" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Double" name="tuition"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="ngay_sinh"/>
+          <Argument type="String" name="lop_hoc"/>
+          <Argument type="String" name="chuong_trinh_DT"/>
+          <Argument type="String" name="trang_thai"/>
+          <Argument type="String" name="email"/>
+          <Argument type="String" name="he_hoc"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jTextField1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jTextField6ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MainStudent" package="edu.hust.soict.ui.student" visibility="public" xPosition="1220.0" yPosition="820.0">
+      <Fields>
+        <Field name="userLogin" type="String" visibility="package"/>
+        <Field name="name" type="String" visibility="package"/>
+        <Field name="ngaySinh" type="String" visibility="package"/>
+        <Field name="lopHoc" type="String" visibility="package"/>
+        <Field name="chuongTrinhDT" type="String" visibility="package"/>
+        <Field name="trangThai" type="String" visibility="package"/>
+        <Field name="email" type="String" visibility="package"/>
+        <Field name="heHoc" type="String" visibility="package"/>
+        <Field name="tuiTion" type="Double" visibility="package"/>
+        <Field name="jButton6" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton7" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton8" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel11" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jMenuBar1" type="javax.swing.JMenuBar" visibility="private"/>
+        <Field name="jMenuItem1" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel4" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel5" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jSeparator1" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="jSeparator2" type="javax.swing.JPopupMenu.Separator" visibility="private"/>
+        <Field name="jSeparator3" type="javax.swing.JPopupMenu.Separator" visibility="private"/>
+        <Field name="jSeparator4" type="javax.swing.JPopupMenu.Separator" visibility="private"/>
+        <Field name="jSeparator5" type="javax.swing.JPopupMenu.Separator" visibility="private"/>
+        <Field name="jSeparator6" type="javax.swing.JPopupMenu.Separator" visibility="private"/>
+        <Field name="jSeparator7" type="javax.swing.JPopupMenu.Separator" visibility="private"/>
+        <Field name="jbClass" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jbInputStudent" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jbInputTeacher" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jbInputTeacher1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jmHeThong" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jmHelp" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jmHoTro" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jmTacVu" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jmTimKiem" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jmiAddUser" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jmiExit" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jmiLogOff" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jmiMonHoc" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jmiNhapDiem" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jmiNhapGV" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jmiNhapKhoa" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jmiNhapLop" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jmiNhapSV" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jtpContent" type="javax.swing.JTabbedPane" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Double" name="tuition"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="ngay_sinh"/>
+          <Argument type="String" name="lop_hoc"/>
+          <Argument type="String" name="chuong_trinh_DT"/>
+          <Argument type="String" name="trang_thai"/>
+          <Argument type="String" name="email"/>
+          <Argument type="String" name="he_hoc"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jmiLogOffActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jmiNhapDiemActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jbInputStudentActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jmiNhapGVActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jmiNhapKhoaActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jmiNhapSVActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jbInputTeacherActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jbClassActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton6ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jmiNhapLopActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jmiMonHocActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jmiExitActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jmHoTroMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jmHelpMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jmTimKiemMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jmTimKiemActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jmiAddUserActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jmHelpActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jmHoTroActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton7ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jbInputTeacher1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton8ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jMenuItem1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="setIcon" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="AdminLogin" package="edu.hust.soict.ui" visibility="public" xPosition="1520.0" yPosition="820.0">
+      <Fields>
+        <Field name="con" type="Connection" visibility="package"/>
+        <Field name="rs" type="ResultSet" visibility="package"/>
+        <Field name="ps" type="PreparedStatement" visibility="package"/>
+        <Field name="userDAO" type="AddUserDAO" visibility="private"/>
+        <Field name="jComboBox1" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jProgressBar1" type="javax.swing.JProgressBar" visibility="private"/>
+        <Field name="jbCancel" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jbLogin" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jpPassword" type="javax.swing.JPasswordField" visibility="private"/>
+        <Field name="jtfUsername" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="setUserDAO" returnType="void" visibility="public">
+          <Argument type="AddUserDAO" name="theUserDAO"/>
+        </Method>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jbLoginActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jtfUsernameKeyReleased" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="jpPasswordKeyReleased" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="jbCancelActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jbLoginKeyReleased" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="jbCancelKeyReleased" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="jtfUsernameActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jpPasswordActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="send" returnType="void" visibility="public"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="setIcon" returnType="void" visibility="private"/>
+        <Method name="resetForm" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="MainLogin" package="edu.hust.soict.ui" visibility="public" xPosition="1820.0" yPosition="820.0">
+      <Fields>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="adminLogin" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="studentLogin" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jLabel4MouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="setIcon" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="ExportDataForm" package="edu.hust.soict.ui.admin" visibility="public" xPosition="2120.0" yPosition="820.0">
+      <Fields>
+        <Field name="ps" type="PreparedStatement" visibility="package"/>
+        <Field name="rs" type="ResultSet" visibility="package"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton2" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTable1" type="javax.swing.JTable" visibility="private"/>
+        <Field name="jTextField1" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="fetchData" returnType="void" visibility="public"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jButton2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="setIcon" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="CreateCourses" package="edu.hust.soict.ui.admin" visibility="public" xPosition="20.0" yPosition="1220.0">
+      <Fields>
+        <Field name="dtmRegister" type="DefaultTableModel" visibility="private" isFinal="true"/>
+        <Field name="main" type="Main" visibility="package"/>
+        <Field name="entityManager" type="javax.persistence.EntityManager" visibility="private"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton2" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton3" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton4" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton5" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton6" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jComboBox1" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jComboBox2" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jComboBox3" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jComboBox4" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jDateChooser1" type="com.toedter.calendar.JDateChooser" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel11" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel12" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel4" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel5" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTable1" type="javax.swing.JTable" visibility="public"/>
+        <Field name="jTextField1" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField2" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField3" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField4" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField5" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField6" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField7" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="monHocList" type="java.util.List&lt;edu.hust.soict.objects.MonHoc&gt;" visibility="private"/>
+        <Field name="monHocQuery" type="javax.persistence.Query" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton3ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton4ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton5ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton6ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jTable1MouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="reSet2" returnType="void" visibility="private"/>
+        <Method name="reSet" returnType="void" visibility="private"/>
+        <Method name="checkinfo" returnType="boolean" visibility="private"/>
+        <Method name="getDataFromSearch" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="Main" package="edu.hust.soict.ui.admin" visibility="public" xPosition="320.0" yPosition="1220.0">
+      <Fields>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel11" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jMenuBar1" type="javax.swing.JMenuBar" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel4" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel5" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jSeparator1" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="jSeparator2" type="javax.swing.JPopupMenu.Separator" visibility="private"/>
+        <Field name="jSeparator3" type="javax.swing.JPopupMenu.Separator" visibility="private"/>
+        <Field name="jSeparator4" type="javax.swing.JPopupMenu.Separator" visibility="private"/>
+        <Field name="jSeparator5" type="javax.swing.JPopupMenu.Separator" visibility="private"/>
+        <Field name="jSeparator6" type="javax.swing.JPopupMenu.Separator" visibility="private"/>
+        <Field name="jSeparator7" type="javax.swing.JPopupMenu.Separator" visibility="private"/>
+        <Field name="jmHeThong" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jmHelp" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jmHoTro" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jmTacVu" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jmTimKiem" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jmiAddUser" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jmiExit" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jmiLogOff" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jmiMonHoc" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jmiNhapDiem" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jmiNhapGV" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jmiNhapKhoa" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jmiNhapLop" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jmiNhapSV" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jtpContent" type="javax.swing.JTabbedPane" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jmiLogOffActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jmiNhapDiemActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jmiNhapGVActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jmiNhapKhoaActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jmiNhapSVActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jmiNhapLopActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jmiMonHocActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jmiExitActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jmHoTroMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jmHelpMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jmTimKiemMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jmTimKiemActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jmiAddUserActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jmHelpActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jmHoTroActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jLabel2MouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jLabel7MouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jLabel6MouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jLabel9MouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jLabel5MouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jLabel4MouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="setColor" returnType="void" visibility="package">
+          <Argument type="JLabel" name="jLabel"/>
+        </Method>
+        <Method name="reSetColor" returnType="void" visibility="package">
+          <Argument type="JLabel" name="jLabel"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="setIcon" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="ManagerUser" package="edu.hust.soict.ui.admin" visibility="public" xPosition="620.0" yPosition="1220.0">
+      <Fields>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton2" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton3" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton4" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jComboBox1" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPasswordField1" type="javax.swing.JPasswordField" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTable1" type="javax.swing.JTable" visibility="private"/>
+        <Field name="jTextField1" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton3ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton4ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jTable1MouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="getData" returnType="void" visibility="private"/>
+        <Method name="checkinfo" returnType="boolean" visibility="private"/>
+        <Method name="resetForm" returnType="void" visibility="private"/>
+        <Method name="resetForm2" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="ClassRegister" package="edu.hust.soict.ui.admin" visibility="public" xPosition="920.0" yPosition="1220.0">
+      <Fields>
+        <Field name="dtmRegister" type="DefaultTableModel" visibility="private" isFinal="true"/>
+        <Field name="entityManager" type="javax.persistence.EntityManager" visibility="private"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton2" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton3" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton4" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton5" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton6" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jComboBox1" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jComboBox2" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jComboBox3" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jComboBox4" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jDateChooser1" type="com.toedter.calendar.JDateChooser" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel11" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel12" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel4" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTable1" type="javax.swing.JTable" visibility="private"/>
+        <Field name="jTextField1" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField2" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField3" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField4" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField5" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField6" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField7" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTimeChooserDemo1" type="lu.tudor.santec.jtimechooser.demo.JTimeChooserDemo" visibility="private"/>
+        <Field name="monHocList" type="java.util.List&lt;edu.hust.soict.objects.MonHoc&gt;" visibility="private"/>
+        <Field name="monHocQuery" type="javax.persistence.Query" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jTable1MouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jButton4ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton5ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton3ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton6ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="reSet" returnType="void" visibility="private"/>
+        <Method name="setIcon" returnType="void" visibility="private"/>
+        <Method name="checkinfo" returnType="boolean" visibility="private"/>
+        <Method name="getDataFromSearch" returnType="void" visibility="private"/>
+        <Method name="reSet2" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="Tuition" package="edu.hust.soict.ui.admin" visibility="public" xPosition="1220.0" yPosition="1220.0">
+      <Fields>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTable1" type="javax.swing.JTable" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="setIcon" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="CreateStudentInfomation" package="edu.hust.soict.ui.admin" visibility="public" xPosition="1520.0" yPosition="1220.0">
+      <Fields>
+        <Field name="dtmStudent" type="DefaultTableModel" visibility="private" isFinal="true"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton2" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton3" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton4" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jComboBox1" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jComboBox2" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jComboBox3" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jDateChooser1" type="com.toedter.calendar.JDateChooser" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel11" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel12" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel4" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTable1" type="javax.swing.JTable" visibility="private"/>
+        <Field name="jTextField1" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField2" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField3" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField4" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField5" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField7" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField8" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField9" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jTextField9ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jTable1MouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jButton4ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton3ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="fetchDataStudent" returnType="void" visibility="private"/>
+        <Method name="getStudentByClass" returnType="void" visibility="private"/>
+        <Method name="resetDataStudent" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="CoursesInfromation" package="edu.hust.soict.ui.admin" visibility="public" xPosition="1820.0" yPosition="1220.0">
+      <Fields>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTable1" type="javax.swing.JTable" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="setIcon" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="AboutUs" package="edu.hust.soict.ui" visibility="public" xPosition="2120.0" yPosition="1220.0">
+      <Fields>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="textArea1" type="java.awt.TextArea" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="setIcon" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="StudentsLogin" package="edu.hust.soict.ui" visibility="public" xPosition="20.0" yPosition="1620.0">
+      <Fields>
+        <Field name="rs" type="ResultSet" visibility="package"/>
+        <Field name="ps" type="PreparedStatement" visibility="package"/>
+        <Field name="jComboBox1" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jProgressBar1" type="javax.swing.JProgressBar" visibility="private"/>
+        <Field name="jbCancel" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jbLogin" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jpPassword" type="javax.swing.JPasswordField" visibility="public"/>
+        <Field name="jtfUsername" type="javax.swing.JTextField" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jbLoginActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jtfUsernameKeyReleased" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="jpPasswordKeyReleased" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="jbCancelActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jbLoginKeyReleased" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="jbCancelKeyReleased" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="jtfUsernameActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="send" returnType="void" visibility="public"/>
+        <Method name="resetForm" returnType="void" visibility="public"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="setIcon" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="StudentDAO" package="edu.hust.soict.dao" visibility="public" xPosition="320.0" yPosition="1620.0">
+      <Fields>
+        <Field name="main" type="Main" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getAll" returnType="ArrayList&lt;Student&gt;" visibility="public"/>
+        <Method name="findByIDStudent" returnType="ArrayList&lt;Student&gt;" visibility="public">
+          <Argument type="String" name="maSV"/>
+        </Method>
+        <Method name="addNew" returnType="Student" visibility="public">
+          <Argument type="Student" name="sv"/>
+        </Method>
+        <Method name="updateByID" returnType="boolean" visibility="public">
+          <Argument type="Student" name="st"/>
+        </Method>
+        <Method name="checkID" returnType="ArrayList&lt;Student&gt;" visibility="public">
+          <Argument type="String" name="masv"/>
+        </Method>
+        <Method name="deleteStudent" returnType="void" visibility="public">
+          <Argument type="String" name="maSV"/>
+        </Method>
+        <Method name="updateStudent" returnType="boolean" visibility="public">
+          <Argument type="Student" name="st"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DBConnect" package="edu.hust.soict.dao" visibility="public" xPosition="620.0" yPosition="1620.0">
+      <Fields>
+        <Field name="driver" type="String" visibility="public" isStatic="true"/>
+        <Field name="url" type="String" visibility="public" isStatic="true"/>
+        <Field name="user" type="String" visibility="public" isStatic="true"/>
+        <Field name="pass" type="String" visibility="public" isStatic="true"/>
+        <Field name="cnn" type="Connection" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="open" returnType="boolean" visibility="public" isStatic="true"/>
+        <Method name="close" returnType="void" visibility="public" isStatic="true"/>
+        <Method name="close" returnType="void" visibility="public" isStatic="true">
+          <Argument type="PreparedStatement" name="ps"/>
+        </Method>
+        <Method name="close" returnType="void" visibility="public" isStatic="true">
+          <Argument type="PreparedStatement" name="ps"/>
+          <Argument type="ResultSet" name="rs"/>
+        </Method>
+        <Method name="close" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Connection" name="myConn"/>
+          <Argument type="Statement" name="myStmt"/>
+          <Argument type="ResultSet" name="myRs"/>
+        </Method>
+        <Method name="close" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Statement" name="myStmt"/>
+          <Argument type="ResultSet" name="myRs"/>
+        </Method>
+        <Method name="close" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Statement" name="myStmt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ClassDAO" package="edu.hust.soict.dao" visibility="public" xPosition="920.0" yPosition="1620.0">
+      <Fields>
+        <Field name="classRegister" type="ClassRegister" visibility="package"/>
+        <Field name="mainStudent" type="MainStudent" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="addNewCourses" returnType="MakeCourses" visibility="public">
+          <Argument type="MakeCourses" name="rg"/>
+        </Method>
+        <Method name="getAll" returnType="ArrayList&lt;Class&gt;" visibility="public"/>
+        <Method name="findByIDClass" returnType="ArrayList&lt;Class&gt;" visibility="public">
+          <Argument type="String" name="maLop"/>
+        </Method>
+        <Method name="addNew" returnType="Register" visibility="public">
+          <Argument type="Register" name="register"/>
+        </Method>
+        <Method name="deleteRegister" returnType="void" visibility="public">
+          <Argument type="String" name="idDangKiLop"/>
+        </Method>
+        <Method name="findByIDStudentRegister" returnType="ArrayList&lt;Register&gt;" visibility="public">
+          <Argument type="String" name="maSV"/>
+        </Method>
+        <Method name="deleteCourses" returnType="void" visibility="public">
+          <Argument type="String" name="malop"/>
+        </Method>
+        <Method name="updateCourses" returnType="boolean" visibility="public">
+          <Argument type="MakeCourses" name="courses"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="SubjectsDAO" package="edu.hust.soict.dao" visibility="public" xPosition="1220.0" yPosition="1620.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="findByIDSubjects" returnType="ArrayList&lt;MonHoc&gt;" visibility="public">
+          <Argument type="String" name="maMonHoc"/>
+        </Method>
+        <Method name="getAll" returnType="ArrayList&lt;MonHoc&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="AddUserDAO" package="edu.hust.soict.dao" visibility="public" xPosition="1820.0" yPosition="1620.0">
+      <Fields>
+        <Field name="form" type="ManagerUser" visibility="package"/>
+        <Field name="main" type="Main" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getAll" returnType="ArrayList&lt;AddUser&gt;" visibility="public"/>
+        <Method name="addNew" returnType="AddUser" visibility="public">
+          <Argument type="AddUser" name="user"/>
+        </Method>
+        <Method name="addUser" returnType="AddUser" visibility="public">
+          <Argument type="AddUser" name="theUser"/>
+        </Method>
+        <Method name="deleteUser" returnType="void" visibility="public">
+          <Argument type="String" name="tenDangNhap"/>
+        </Method>
+        <Method name="updateUser2" returnType="boolean" visibility="public">
+          <Argument type="AddUser" name="user"/>
+        </Method>
+        <Method name="checkID" returnType="ArrayList&lt;AddUser&gt;" visibility="public">
+          <Argument type="String" name="tendangnhap"/>
+        </Method>
+        <Method name="findUserName" returnType="ArrayList&lt;AddUser&gt;" visibility="public">
+          <Argument type="String" name="tenDN"/>
+        </Method>
+        <Method name="authenticate" returnType="boolean" visibility="public">
+          <Argument type="AddUser" name="theUser"/>
+        </Method>
+        <Method name="getEncrpytedPassword" returnType="String" visibility="private">
+          <Argument type="String" name="user_name"/>
+        </Method>
+        <Method name="changePassword" returnType="void" visibility="public">
+          <Argument type="AddUser" name="user"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="public"/>
+        <Method name="updateByID" returnType="AddUser" visibility="public">
+          <Argument type="AddUser" name="user"/>
+        </Method>
+        <Method name="extractUserFromResultSet" returnType="AddUser" visibility="public">
+          <Argument type="ResultSet" name="rs"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="IAddUserDAO" package="edu.hust.soict.dao" visibility="public" xPosition="1520.0" yPosition="1620.0">
+      <Methods>
+        <Method name="getAll" returnType="ArrayList&lt;AddUser&gt;" visibility="public"/>
+        <Method name="findUserName" returnType="ArrayList&lt;AddUser&gt;" visibility="public">
+          <Argument type="String" name="userName"/>
+        </Method>
+        <Method name="addNew" returnType="AddUser" visibility="public">
+          <Argument type="AddUser" name="user"/>
+        </Method>
+        <Method name="updateByID" returnType="AddUser" visibility="public">
+          <Argument type="AddUser" name="user"/>
+        </Method>
+        <Method name="checkID" returnType="ArrayList&lt;AddUser&gt;" visibility="public">
+          <Argument type="String" name="tenDangNhap"/>
+        </Method>
+        <Method name="updateUser2" returnType="boolean" visibility="public">
+          <Argument type="AddUser" name="user"/>
+        </Method>
+        <Method name="extractUserFromResultSet" returnType="AddUser" visibility="public">
+          <Argument type="ResultSet" name="rs"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="IStudentDAO" package="edu.hust.soict.dao" visibility="public" xPosition="2120.0" yPosition="1620.0">
+      <Methods>
+        <Method name="getAll" returnType="ArrayList&lt;Student&gt;" visibility="public"/>
+        <Method name="findByIDStudent" returnType="ArrayList&lt;Student&gt;" visibility="public">
+          <Argument type="String" name="maSV"/>
+        </Method>
+        <Method name="addNew" returnType="Student" visibility="public">
+          <Argument type="Student" name="sv"/>
+        </Method>
+        <Method name="updateByID" returnType="boolean" visibility="public">
+          <Argument type="Student" name="sv"/>
+        </Method>
+        <Method name="checkID" returnType="ArrayList&lt;Student&gt;" visibility="public">
+          <Argument type="String" name="masv"/>
+        </Method>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="edu.hust.soict.dao.SubjectsDAO" target="edu.hust.soict.objects.MonHoc" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="edu.hust.soict.dao.ClassDAO" target="edu.hust.soict.objects.Register" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="main" source="edu.hust.soict.ui.admin.CreateCourses" target="edu.hust.soict.ui.admin.Main" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="edu.hust.soict.dao.ClassDAO" target="edu.hust.soict.objects.MakeCourses" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="edu.hust.soict.ui.student.SearchInfoStudent" target="edu.hust.soict.objects.Student" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="edu.hust.soict.dao.StudentDAO" target="edu.hust.soict.dao.IStudentDAO"/>
+    <HasRelation name="userDAO" source="edu.hust.soict.ui.AdminLogin" target="edu.hust.soict.dao.AddUserDAO" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mainStudent" source="edu.hust.soict.ui.student.StudentRegisterCourses" target="edu.hust.soict.ui.student.MainStudent" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mainStudent" source="edu.hust.soict.ui.student.SearchInfoStudent" target="edu.hust.soict.ui.student.MainStudent" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="edu.hust.soict.ui.student.Subjects" target="edu.hust.soict.objects.MonHoc" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="edu.hust.soict.ui.student.StudentRegisterCourses" target="edu.hust.soict.objects.Class" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="form" source="edu.hust.soict.dao.AddUserDAO" target="edu.hust.soict.ui.admin.ManagerUser" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="classRegister" source="edu.hust.soict.dao.ClassDAO" target="edu.hust.soict.ui.admin.ClassRegister" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="edu.hust.soict.dao.StudentDAO" target="edu.hust.soict.objects.Student" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="edu.hust.soict.ui.student.StudentRegisterCourses" target="edu.hust.soict.objects.Register" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mainStudent" source="edu.hust.soict.dao.ClassDAO" target="edu.hust.soict.ui.student.MainStudent" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="edu.hust.soict.dao.IStudentDAO" target="edu.hust.soict.objects.Student" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="edu.hust.soict.ui.student.StudentRegisterCourses" target="edu.hust.soict.objects.Student" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="edu.hust.soict.dao.ClassDAO" target="edu.hust.soict.objects.Class" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="edu.hust.soict.ui.AdminLogin" target="edu.hust.soict.dao.AddUserDAO" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="edu.hust.soict.ui.student.SearchInfoStudent" target="edu.hust.soict.objects.Class" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="edu.hust.soict.dao.AddUserDAO" target="edu.hust.soict.objects.AddUser" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="edu.hust.soict.dao.AddUserDAO" target="edu.hust.soict.dao.IAddUserDAO"/>
+    <UseRelation source="edu.hust.soict.dao.IAddUserDAO" target="edu.hust.soict.objects.AddUser" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="main" source="edu.hust.soict.dao.AddUserDAO" target="edu.hust.soict.ui.admin.Main" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="main" source="edu.hust.soict.dao.StudentDAO" target="edu.hust.soict.ui.admin.Main" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

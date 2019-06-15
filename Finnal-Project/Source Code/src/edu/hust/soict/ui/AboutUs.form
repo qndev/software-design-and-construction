@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
+    <Property name="title" type="java.lang.String" value="About Us"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
+                  <Component id="textArea1" pref="400" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Component id="textArea1" pref="290" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="java.awt.TextArea" name="textArea1">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="editable" type="boolean" value="false"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="SansSerif" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#xa;GI&#x1eda;I THI&#x1ec6;U CHUNG &#xa;&#xa;Tr&#x1b0;&#x1edd;ng &#x110;&#x1ea1;i h&#x1ecd;c B&#xe1;ch khoa H&#xe0; N&#x1ed9;i l&#xe0; tr&#x1b0;&#x1edd;ng &#x111;&#x1ea1;i h&#x1ecd;c &#x111;a ng&#xe0;nh v&#x1ec1; k&#x1ef9; thu&#x1ead;t &#x111;&#x1b0;&#x1ee3;c th&#xe0;nh l&#x1ead;p ng&#xe0;y 15 th&#xe1;ng 10 n&#x103;m 1956. &#xa;Tr&#x1b0;&#x1edd;ng lu&#xf4;n l&#xe0; m&#x1ed9;t trong nh&#x1eef;ng tr&#x1b0;&#x1edd;ng &#x111;&#x1ea1;i h&#x1ecd;c k&#x1ef9; thu&#x1ead;t h&#xe0;ng &#x111;&#x1ea7;u c&#x1ee7;a n&#x1ec1;n gi&#xe1;o d&#x1ee5;c Vi&#x1ec7;t Nam. &#xa;V&#x1edb;i nhi&#x1ec1;u &#x111;&#xf3;ng g&#xf3;p cho c&#xf4;ng cu&#x1ed9;c x&#xe2;y d&#x1ef1;ng v&#xe0; b&#x1ea3;o v&#x1ec7; T&#x1ed5; qu&#x1ed1;c, &#xa;Tr&#x1b0;&#x1edd;ng &#x111;&#xe3; &#x111;&#x1b0;&#x1ee3;c &#x110;&#x1ea3;ng v&#xe0; Nh&#xe0; n&#x1b0;&#x1edb;c t&#x1eb7;ng nhi&#x1ec1;u danh hi&#x1ec7;u v&#xe0; ph&#x1ea7;n th&#x1b0;&#x1edf;ng qu&#xfd; gi&#xe1; cho c&#xe1;c c&#xe1; nh&#xe2;n v&#xe0; t&#x1ead;p th&#x1ec3; Tr&#x1b0;&#x1edd;ng.  &#xa;T&#xea;n ti&#x1ebf;ng Vi&#x1ec7;t: Tr&#x1b0;&#x1edd;ng &#x110;&#x1ea1;i h&#x1ecd;c B&#xe1;ch khoa H&#xe0; N&#x1ed9;i  T&#xea;n ti&#x1ebf;ng Anh: Hanoi University of Science and Technology  &#xa;&#x110;&#x1ecb;a ch&#x1ec9;: S&#x1ed1; 01, &#x110;&#x1ea1;i C&#x1ed3; Vi&#x1ec7;t, Hai B&#xe0; Tr&#x1b0;ng, H&#xe0; N&#x1ed9;i  &#xa;C&#x1a1; s&#x1edf; v&#x1ead;t ch&#x1ea5;t:  Khu&#xf4;n vi&#xea;n Tr&#x1b0;&#x1edd;ng c&#xf3; t&#x1ed5;ng di&#x1ec7;n t&#xed;ch 26 ha (l&#x1edb;n nh&#x1ea5;t trong c&#xe1;c tr&#x1b0;&#x1edd;ng &#x111;&#x1ea1;i h&#x1ecd;c khu v&#x1ef1;c n&#x1ed9;i th&#xe0;nh H&#xe0; N&#x1ed9;i) &#xa;Th&#x1b0; vi&#x1ec7;n &#x111;i&#x1ec7;n t&#x1eed; T&#x1ea1; Quang B&#x1eed;u v&#x1edb;i di&#x1ec7;n t&#xed;ch 37.000 m2, c&#xf3; th&#x1ec3; ph&#x1ee5;c v&#x1ee5; &#x111;&#x1ed3;ng th&#x1edd;i 2.000 sinh vi&#xea;n v&#x1edb;i 600.000 cu&#x1ed1;n s&#xe1;ch, 130.000 &#x111;&#x1ea7;u s&#xe1;ch &#x111;i&#x1ec7;n t&#x1eed;. &#xa;Sinh vi&#xea;n &#x111;&#x1b0;&#x1ee3;c  truy c&#x1ead;p mi&#x1ec5;n ph&#xed;  CSDL t&#x1eeb; c&#xe1;c ngu&#x1ed3;n nh&#x1b0; Science Driect, Scopus&#x2026; &#xa;H&#x1ec7; th&#x1ed1;ng 400 ph&#xf2;ng h&#x1ecd;c v&#xe0; ph&#xf2;ng th&#xed; nghi&#x1ec7;m, trong &#x111;&#xf3; c&#xf3; 12 ph&#xf2;ng th&#xed; nghi&#x1ec7;m tr&#x1ecd;ng &#x111;i&#x1ec3;m v&#xe0; &#x111;&#x1ea7;u t&#x1b0; t&#x1ead;p trung, ph&#x1ee5;c v&#x1ee5; hi&#x1ec7;u qu&#x1ea3; c&#xf4;ng t&#xe1;c &#x111;&#xe0;o t&#x1ea1;o v&#xe0; nghi&#xea;n c&#x1ee9;u. &#xa;To&#xe0;n b&#x1ed9; gi&#x1ea3;ng &#x111;&#x1b0;&#x1edd;ng &#x111;&#x1b0;&#x1ee3;c trang b&#x1ecb; &#x111;&#x1ea7;y &#x111;&#x1ee7; &#x111;i&#x1ec1;u h&#xf2;a v&#xe0; thi&#x1ebf;t b&#x1ecb; gi&#x1ea3;ng d&#x1ea1;y c&#xf9;ng v&#x1edb;i h&#x1ec7; th&#x1ed1;ng wifi mi&#x1ec5;n ph&#xed; trong khu&#xf4;n vi&#xea;n Tr&#x1b0;&#x1edd;ng. &#xa;Trung t&#xe2;m k&#xfd; t&#xfa;c x&#xe1; khang trang &#x111;&#xe1;p &#x1ee9;ng nhu c&#x1ea7;u l&#x1b0;u tr&#xfa; c&#x1ee7;a g&#x1ea7;n 4.500 sinh vi&#xea;n. &#xa;Khu li&#xea;n h&#x1ee3;p th&#x1ec3; thao c&#xf3; di&#x1ec7;n t&#xed;ch 20.000 m2 v&#x1edb;i h&#x1ec7; th&#x1ed1;ng c&#x1a1; s&#x1edf; v&#x1ead;t ch&#x1ea5;t hi&#x1ec7;n &#x111;&#x1ea1;i, bao g&#x1ed3;m: s&#xe2;n b&#xf3;ng, b&#x1ec3; b&#x1a1;i, s&#xe2;n tennis ti&#xea;u chu&#x1ea9;n qu&#x1ed1;c gia v&#xe0; nh&#xe0; thi &#x111;&#x1ea5;u &#x111;a n&#x103;ng ti&#xea;u chu&#x1ea9;n &#x110;&#xf4;ng Nam &#xc1;. &#xa;Trung t&#xe2;m Y t&#x1ebf; ho&#x1ea1;t &#x111;&#x1ed9;ng theo m&#xf4; h&#xec;nh ph&#xf2;ng kh&#xe1;m &#x111;a khoa ch&#x103;m s&#xf3;c s&#x1ee9;c kh&#x1ecf;e th&#x1b0;&#x1edd;ng xuy&#xea;n cho c&#xe1;c c&#xe1;n b&#x1ed9; v&#xe0; sinh vi&#xea;n Tr&#x1b0;&#x1edd;ng."/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>

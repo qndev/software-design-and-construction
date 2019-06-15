@@ -1,0 +1,41 @@
+Các bước cài ứng dụng Student Information System.
+
+1: Đối với hệ điều hành Windows
+
+Bước 1: Cài đặt MySQL Community Server 5.7 (https://dev.mysql.com/downloads/mysql/)
+Chú ý: + Trong quá trình cài đặt sẽ yêu cầu điền thông tin username và pasword cho MySQL Server.
+       + Cài đặt username = "root", Password = "root".
+       + Sau khi cài đặt xong tạo Database với tên là "sis_finnal" (Cấu trúc các bảng trong Database có trong file sis_finnal.sql)
+       + Link download file sis_finnal.sql: https://drive.google.com/open?id=1M88BYibxGR5zC5C8l795NKQaEd6E72jN
+Bước 2: Cài đặt công cụ phát triển cũng như môi trừong thực thi máy ảo của Java
+Chú ý  + Link download: https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+       + Setup path.
+Bước 3: Download file Cài đặt ứng dụng Student Information System
+       + Link download: https://drive.google.com/open?id=12xr6yT4tPQ-mGgStmcRVtQ7X7Rd5u3K7
+       + Giải nén: Chạy file Student_Information_System.jar bằng cách kích đúp chuột vào file.
+
+2: Đối với hệ điều hành nhân Linux
+
+Bước 1,2: Tương tự như trên.
+
+Bước 3: Download file Cài đặt ứng dụng Student Information System
+       + Link download: https://drive.google.com/open?id=1wBAgvTKODkS7kwhQJf4LQtOqrCdZ-s9X
+       + Giải nén vào thư mục bất kỳ VD: Thư mục /home/quangnd 
+       + Tạo file Student_Information_System.desktop với nội dung:
+
+         [Desktop Entry]
+         Name=Student Information System
+         Comment=Hanoi University of Science and Technology
+         Exec=/Đường dẫn đến file Student_Information_System.jar bạn vừa giải nén/Student_Information_System.jar
+         Path=/Đường dẫn đến file Student_Information_System.jar bạn vừa giải nén/
+         Icon=/Đường dẫn đến file icon/
+         Categories=Application;Development;Java;IDE
+         Version=1.0
+         Type=Application
+         Terminal=false
+
+       + Mở Terminal Thay đổi quyền thực thi file Student_Information_System.jar với câu lệnh: sudo chmod +x Student_Information_System.jar
+       + Chạy ứng dụng Student Information System bằng cách kích đúp chuột vào file Student_Information_System.desktop
+
+3: + Form Admin với username = "admin", password = "admin" đăng nhập hệ thống.
+   + Form Student với username = "20148888", password = "20148888" đăng nhập hệ thống.
